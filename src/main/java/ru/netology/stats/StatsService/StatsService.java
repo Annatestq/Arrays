@@ -8,10 +8,12 @@ public class StatsService {
         }
         return price;
     }
+
     public long average(long[] sales) {
         long price = amount(sales);
         return price / 12;
     }
+
     public long numberMax(long[] sales) {
         long month = 0;
         long max = sales[0];
@@ -24,6 +26,7 @@ public class StatsService {
         }
         return month + 1;
     }
+
     public long numberMin(long[] sales) {
         long month = 0;
         long min = sales[0];
@@ -36,8 +39,9 @@ public class StatsService {
         }
         return month + 1;
     }
+
     public long salesMin(long[] sales) {
-        long all =0;
+        long all = 0;
         for (long sale : sales) {
             if (sale < average(sales)) {
                 all++;
@@ -45,8 +49,10 @@ public class StatsService {
         }
         return all;
     }
+
     public long salesMax(long[] sales) {
-        long all =0;
+        long all = 0;
+        long averageSale = average(sales);
         for (long sale : sales) {
             if (sale > average(sales)) {
                 all++;

@@ -51,6 +51,7 @@ public class StatsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldMinSales() {
         StatsService service = new StatsService();
@@ -61,6 +62,7 @@ public class StatsServiceTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldMaxSales() {
         StatsService service = new StatsService();
