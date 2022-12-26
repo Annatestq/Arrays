@@ -41,9 +41,10 @@ public class StatsService {
     }
 
     public long salesMin(long[] sales) {
+        long averageSale = average(sales);
         long all = 0;
         for (long sale : sales) {
-            if (sale < average(sales)) {
+            if (sale < averageSale) {
                 all++;
             }
         }
@@ -51,10 +52,10 @@ public class StatsService {
     }
 
     public long salesMax(long[] sales) {
-        long all = 0;
         long averageSale = average(sales);
+        long all = 0;
         for (long sale : sales) {
-            if (sale > average(sales)) {
+            if (sale > averageSale) {
                 all++;
             }
         }
